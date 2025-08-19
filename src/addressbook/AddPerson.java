@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class AddPerson {
     Scanner scan = new Scanner(System.in);
 
-    public void addContact() {
+    public Contact addContact() {
         Contact person = new Contact();
         System.out.println("Enter person First Name: ");
         person.setFirstName(scan.next());
@@ -23,5 +23,6 @@ public class AddPerson {
         person.setPhoneNumber(scan.nextLong());
         System.out.println("Enter person email : ");
         person.setEmail(scan.next());
+        return person;
     }
 }
