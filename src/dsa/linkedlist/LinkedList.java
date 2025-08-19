@@ -15,6 +15,7 @@ public class LinkedList {
         ll.display();
         ReverseLinkedList list = new ReverseLinkedList();
         Node node = list.reverseLinkedList(ll.head);
+        MergeLinkedList mergeLinkedList=new MergeLinkedList();
         ll.display(node);
     }
 
