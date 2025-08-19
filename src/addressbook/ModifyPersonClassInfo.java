@@ -6,7 +6,20 @@ import java.util.Scanner;
 public class ModifyPersonClassInfo {
     Scanner scan = new Scanner(System.in);
 
-    public boolean updatePerson(String firstName) {
+    public boolean updatePerson(List<Contact> contactList) {
+        System.out.println("Enter person Last Name: ");
+        String firstName = scan.next();
+        int index = 0;
+        for (Contact contact : contactList) {
+            if (contact.getFirstName().equals(firstName)) {
+                break;
+            }
+            index++;
+        }
+        if (index == contactList.size()) {
+            System.out.println("This type first name of person is not available in book");
+            return false;
+        }
         Contact person = new Contact();
         System.out.println("Enter person Last Name: ");
         person.setLastName(scan.next());
@@ -22,7 +35,12 @@ public class ModifyPersonClassInfo {
         person.setPhoneNumber(scan.nextLong());
         System.out.println("Enter person email : ");
         person.setEmail(scan.next());
+        contactList.set(index,person);
+        return true;
+    }
 
+    public boolean deletePerson(String firstName) {
+        System.out.println("No such person not available with name of : " + firstName);
         return false;
     }
     public boolean deletePerson(String firstName) {
