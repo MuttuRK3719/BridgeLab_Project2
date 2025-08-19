@@ -4,21 +4,6 @@ public class LinkedList {
     Node head;
     Node tail;
 
-    public static void main(String[] args) {
-        LinkedList ll = new LinkedList();
-        ll.add(10);
-        ll.add(20);
-        ll.add(30);
-        ll.add(40);
-        ll.add(50);
-        ll.add(60);
-        ll.display();
-        ReverseLinkedList list = new ReverseLinkedList();
-        Node node = list.reverseLinkedList(ll.head);
-        MergeLinkedList mergeLinkedList=new MergeLinkedList();
-        ll.display(node);
-    }
-
     void add(int val) {
         if (head == null) {
             head = new Node(val);

@@ -4,7 +4,7 @@ public class Node {
     Integer value;
     Node next;
 
-    Node(int val) {
+    Node(Integer val) {
         this.value = val;
     }
 }

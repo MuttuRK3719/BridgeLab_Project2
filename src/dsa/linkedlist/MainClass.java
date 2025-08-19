@@ -2,17 +2,16 @@ package dsa.linkedlist;
 
 public class MainClass {
     public static void main(String[] args) {
-        LinkedList ll = new LinkedList();
-        ll.add(10);
-        ll.add(80);
-        ll.add(-10);
-        ll.add(40);
-        ll.add(20);
-        ll.add(50);
+        LinkedList list = new LinkedList();
+        list.add(10);
+        list.add(80);
+        list.add(-10);
+        list.add(40);
+        list.add(20);
+        list.add(50);
         SearchElement searchElement = new SearchElement();
 
-        System.out.println(searchElement.searchElement(ll.head, 7
-                0));
+        System.out.println(searchElement.searchElement(list.head, 70));
 
     }
 }
