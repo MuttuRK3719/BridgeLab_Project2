@@ -25,7 +25,16 @@ public class ModifyPersonClassInfo {
 
         return false;
     }
-    public boolean deletePerson(String firstName) {
+
+    public boolean deletePerson(List<Contact> contactList) {
+        System.out.println("Enter person Last Name: ");
+        String firstName = scan.next();
+        for (Contact contact : contactList) {
+            if (contact.getFirstName().equals(firstName)) {
+                contactList.remove(contact);
+                return true;
+            }
+        }
         System.out.println("No such person not available with name of : " + firstName);
         return false;
     }
