@@ -25,4 +25,8 @@ public class ModifyPersonClassInfo {
 
         return false;
     }
+    public boolean deletePerson(String firstName) {
+        System.out.println("No such person not available with name of : " + firstName);
+        return false;
+    }
 }
