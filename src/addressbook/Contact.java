@@ -1,3 +1,5 @@
+package addressbook;
+
 public class Contact {
     private String firstName;
     private String lastName;
@@ -10,7 +12,7 @@ public class Contact {
 
     @Override
     public String toString() {
-        return "Contact{" +
+        return "addressbook.Contact{" +
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", address='" + address + '\'' +
