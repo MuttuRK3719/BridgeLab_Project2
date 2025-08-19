@@ -1,7 +1,7 @@
 package dsa.linkedlist;
 
 public class Node {
-    int value;
+    Integer value;
     Node next;
 
     Node(int val) {
