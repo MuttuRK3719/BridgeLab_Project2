@@ -1,7 +1,7 @@
 package dsa.stack;
 
 public class Stack<T> {
-    int size = 10;
+    private int size = 10;
     T[] stackArray;
     int index = 0;
 
@@ -22,13 +22,11 @@ public class Stack<T> {
     }
 
     T pop() {
-        if (index >= 0) {
-            T ch = stackArray[index];
-            index--;
-            return ch;
-        } else {
+        if (isEmpty()) {
             throw new IndexOutOfBoundsException();
 
+        } else {
+        return stackArray[--index];
         }
     }
 
@@ -46,6 +44,5 @@ public class Stack<T> {
     int size() {
         return index;
     }
-
 
 }
