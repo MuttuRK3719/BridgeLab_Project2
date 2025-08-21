@@ -1,6 +1,4 @@
-package dsa.queue1;
-
-import java.util.Queue;
+package dsa.queue;
 
 public class ReverseElements {
     public static void main(String[] args) {

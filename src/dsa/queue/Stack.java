@@ -1,4 +1,4 @@
-package dsa.queue1;
+package dsa.queue;
 
 public class Stack<T> {
     private int size = 10;

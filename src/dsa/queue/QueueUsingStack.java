@@ -1,4 +1,4 @@
-package dsa.queue1;
+package dsa.queue;
 
 
 public class QueueUsingStack<T> {
@@ -51,6 +51,12 @@ public class QueueUsingStack<T> {
     }
     boolean isEmpty(){
         return stack1.isEmpty();
+    }
+    T pollLast(){
+       if(stack1.isEmpty()){
+           throw  new IndexOutOfBoundsException();
+       }
+     return stack1.pop();
     }
 
 
