@@ -1,6 +1,6 @@
 package dsa.linkedlist;
 
-public class LinkedList {
+ class LinkedList {
     Node head;
     Node tail;
 
