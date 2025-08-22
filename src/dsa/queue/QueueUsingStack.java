@@ -14,7 +14,7 @@ public class QueueUsingStack<T> {
         queue.offer(100);
 
 
-        System.out.println(queue.poll());
+//        System.out.println(queue.poll());
 //        System.out.println(queue.poll());
         System.out.println(queue.size());
     }
@@ -49,14 +49,26 @@ public class QueueUsingStack<T> {
     int size() {
         return stack1.size();
     }
-    boolean isEmpty(){
+
+    boolean isEmpty() {
         return stack1.isEmpty();
     }
-    T pollLast(){
-       if(stack1.isEmpty()){
-           throw  new IndexOutOfBoundsException();
-       }
-     return stack1.pop();
+
+    T pollLast() {
+        while (!stack1.isEmpty()) {
+            stack2.push(stack1.pop());
+        }
+
+        if (stack2.isEmpty())
+            throw new IndexOutOfBoundsException();
+
+        T temp = stack2.pop();
+        while (!stack2.isEmpty()) {
+            stack1.push(stack2.pop());
+
+        }
+        return temp;
+
     }
 
 
