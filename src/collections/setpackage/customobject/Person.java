@@ -1,6 +1,4 @@
-package collections.customobject;
-
-import java.util.Objects;
+package collections.setpackage.customobject;
 
 public class Person{
     private Integer age;
