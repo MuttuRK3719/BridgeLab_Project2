@@ -1,4 +1,4 @@
-package customcollections.setpackage.customobject;
+package customcollections.setinterface.customobject;
 
 import java.util.HashSet;
 import java.util.Set;

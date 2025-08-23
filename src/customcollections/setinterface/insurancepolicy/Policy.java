@@ -1,4 +1,4 @@
-package customcollections.setpackage.insurancepolicy;
+package customcollections.setinterface.insurancepolicy;
 
 import java.time.LocalDate;
 
