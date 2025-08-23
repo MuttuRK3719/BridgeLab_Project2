@@ -1,10 +1,10 @@
 package dsa.linkedlist;
 
-public class Node {
-    Integer value;
+public class Node<T> {
+    T value;
     Node next;
 
-    Node(Integer val) {
+    Node(T val) {
         this.value = val;
     }
 }

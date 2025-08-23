@@ -1,21 +1,21 @@
 package dsa.linkedlist;
 
-public class LinkedList {
-    Node head;
-    Node tail;
+public class LinkedList<T> {
+    Node<T> head;
+    Node<T> tail;
 
-    void add(int val) {
+    void add(T val) {
         if (head == null) {
             head = new Node(val);
             tail = head;
             return;
         }
-        Node n = new Node(val);
+        Node<T> n = new Node(val);
         tail.next = n;
         tail = n;
     }
 
-    void display(Node temp) {
+    void display(Node<T> temp) {
         while (temp != null) {
             System.out.print(temp.value + "->");
             temp = temp.next;
@@ -24,7 +24,7 @@ public class LinkedList {
     }
 
     void display() {
-        Node temp = head;
+        Node<T> temp = head;
         while (temp != null) {
             System.out.print(temp.value + "->");
             temp = temp.next;

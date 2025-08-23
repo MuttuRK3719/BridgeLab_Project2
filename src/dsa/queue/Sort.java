@@ -9,14 +9,10 @@ public class Sort {
         queue.offer(15);
         queue.offer(-1);
         queue.offer(-5);
-//        System.out.println(queue.pollLast());
-
         sort(queue);
-//
         while (!queue.isEmpty()) {
             System.out.println(queue.poll());
         }
-
     }
 
     static void sort(QueueUsingStack<Integer> queue) {
@@ -43,7 +39,5 @@ public class Sort {
             insertSorted(queue, temp, size - 1);
         }
     }
-
-
 }
 

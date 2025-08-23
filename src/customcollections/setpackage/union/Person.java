@@ -1,8 +1,6 @@
-package collections.setpackage.union;
+package customcollections.setpackage.union;
 
 import java.util.Objects;
-import java.util.Set;
-import java.util.TreeSet;
 
 public class Person implements Comparable<Person> {
         private String name;

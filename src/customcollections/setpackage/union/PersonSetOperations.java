@@ -1,4 +1,4 @@
-package collections.setpackage.union;
+package customcollections.setpackage.union;
 
 import java.util.Set;
 import java.util.TreeSet;

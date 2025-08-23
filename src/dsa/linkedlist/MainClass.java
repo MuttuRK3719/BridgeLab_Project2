@@ -2,7 +2,7 @@ package dsa.linkedlist;
 
 public class MainClass {
     public static void main(String[] args) {
-        LinkedList list = new LinkedList();
+        LinkedList<Integer> list = new LinkedList();
         list.add(10);
         list.add(80);
         list.add(-10);

@@ -1,4 +1,4 @@
-package collections.setpackage.customobject;
+package customcollections.setpackage.customobject;
 
 public class Person{
     private Integer age;
