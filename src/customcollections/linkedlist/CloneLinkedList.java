@@ -12,7 +12,6 @@ public class CloneLinkedList<T> {
             this.random = null;
         }
     }
-
     Node head;
     Node tail;
 
