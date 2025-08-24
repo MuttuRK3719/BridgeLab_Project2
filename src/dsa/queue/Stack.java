@@ -1,6 +1,6 @@
 package dsa.queue;
 
-public class Stack<T> {
+ class Stack<T> {
     private int size = 10;
     T[] stackArray;
     int index = 0;
