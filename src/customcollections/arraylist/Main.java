@@ -1,10 +1,6 @@
 package customcollections.arraylist;
 
 import java.time.LocalDate;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.TreeMap;
-
 public class Main {
     public static void main(String[] args) {
         PolicyManagement policyManagement = new PolicyManagement();
@@ -16,7 +12,6 @@ public class Main {
         policyManagement.addPolicy(policy3);
         policyManagement.getPolicyById("p101");
         policyManagement.getPolicyExpireDate();
-
 
     }
 }
