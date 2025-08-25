@@ -5,9 +5,9 @@ import java.util.*;
 public class SortMapValues {
     public static void main(String[] args) {
         sortMapByValues();
+
     }
-    //
-    static void sortMapByValues() {
+       public static void sortMapByValues() {
         Map<String, Integer> map = new HashMap<>();
         map.put("muttu", 789);
         map.put("pras", 123);
