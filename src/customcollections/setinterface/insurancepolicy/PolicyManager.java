@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class PolicyManager {
     Scanner scan = new Scanner(System.in);
-    private PolicyStorage policyStorage = new PolicyStorage();
+    private PolicyStorage policyStorage;
     private DisplayPolicies displayPolicies;
 
     PolicyManager(PolicyStorage p, DisplayPolicies displayPolicies) {
