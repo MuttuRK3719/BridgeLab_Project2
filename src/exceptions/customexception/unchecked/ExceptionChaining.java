@@ -9,16 +9,18 @@ public class ExceptionChaining {
     public static void main(String[] args) {
         try {
             fileHandling();
-        } catch (IOException e) {
-            System.out.println(e.getCause());
-            System.out.println(e.getMessage());
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            System.out.println("Caught Exception: " + e.getMessage());
+            System.out.println("Original Cause: " + e.getCause());
         }
     }
 
-    public static void fileHandling() throws IOException {
-        File file = new File("C:\\Users\\Dell\\OneDrive\\Desktop\\spingboot\\BridgeLab1\\src\\Pages.txt");
-        FileInputStream fileInputStream = new FileInputStream(file);
+    public static void fileHandling() throws Exception {
+        try {
+            File file = new File("C:\\Users\\OneDrive\\Desktop\\spingboot\\BridgeLab1\\src\\Pages.txt");
+            FileInputStream fileInputStream = new FileInputStream(file);
+        } catch (IOException e) {
+            throw new Exception("File not found ", e);
+        }
     }
 }
