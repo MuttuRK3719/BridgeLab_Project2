@@ -13,7 +13,7 @@ public class PolicyManagement {
         policyById = new HashMap<>();
         policyByInsertionOrder = new LinkedHashMap<>();
         policyByExpiryDate = new TreeMap<>();
-        policyList=new HashMap<>();
+        policyList = new HashMap<>();
     }
 
     void addPolicy(Policy policy) {
@@ -21,7 +21,7 @@ public class PolicyManagement {
         policyByInsertionOrder.put(policy.getPolicyId(), policy);
         policyByExpiryDate.put(policy.getDate(), policy);
         policyList.computeIfAbsent(policy.getHolderName(), (list) -> new ArrayList<>())
-                        .add(policy);
+                .add(policy);
 
     }
 
@@ -42,10 +42,25 @@ public class PolicyManagement {
             System.out.println(policy);
         }
     }
-    void listPolicyOnHolderName(String name){
-        if(policyList.containsKey(name)){
+
+    void listPolicyOnHolderName(String name) {
+        if (policyList.containsKey(name)) {
             System.out.println(policyList.get(name));
+        } else System.out.println("The user name is not present in list");
+    }
+
+    void removeExpiredPolicy() {
+        for (var map : policyById.entrySet()) {
+            if (isExpired(map.getValue())) {
+                policyById.remove(map.getKey());
+                policyByExpiryDate.remove(map.getValue().getDate());
+                policyByInsertionOrder.remove(map.getKey());
+                System.out.println(map.getValue());
+            }
         }
-        else System.out.println("The user name is not present in list");
+    }
+
+    boolean isExpired(Policy policy) {
+        return policy.getDate().compareTo(LocalDate.now()) < 0;
     }
 }
