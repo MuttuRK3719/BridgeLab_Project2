@@ -2,7 +2,7 @@ Welcome to repository!!
 This file contains practice questions related to Object Oriented Programming in Java,Exception,Collection Framework.
 It contains multiple branchs related to there topics in following are listed
 
-1] Address Registry Book Project
+Address Registry Book Project
 
 Branch name:- addcontact => Add multiple details to contact 
 
@@ -15,6 +15,8 @@ Branch name:- booklist => creating multiple book to maintain large data.
 Branch name:- deleteperson => deleting person from book based on there id.
 
 Branch name:- updateperson => updating person details in  book based on there id.
+
+Related to Collection, Stack, Queue, Exception
 
 Branch name:- collections => practice DSA questions and mini projects using related collection.
 
