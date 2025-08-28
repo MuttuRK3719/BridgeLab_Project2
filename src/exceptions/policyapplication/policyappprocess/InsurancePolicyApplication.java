@@ -1,6 +1,4 @@
-package exceptions.policyapplication;
-
-import exceptions.customexception.unchecked.ExceptionChaining;
+package exceptions.policyapplication.policyappprocess;
 
 public class InsurancePolicyApplication {
     public static void main(String[] args) throws InvalidAgeException, HealthIssueException, PoorDrivingRecordException {

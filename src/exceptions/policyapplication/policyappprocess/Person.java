@@ -1,4 +1,4 @@
-package exceptions.policyapplication;
+package exceptions.policyapplication.policyappprocess;
 
 public class Person {
     private String name;
