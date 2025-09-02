@@ -1,6 +1,7 @@
 package filehandling;
 
 import java.io.FileInputStream;
+import java.io.FileReader;
 import java.io.IOException;
 
 public class ReadingFromFile {
@@ -10,5 +11,6 @@ public class ReadingFromFile {
         while ((data = fileInputStream.read()) != -1) {
             System.out.println((char) (data));
         }
+//        FileReader fileReader=new FileReader()
     }
 }
