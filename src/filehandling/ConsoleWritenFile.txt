@@ -1,0 +1,2 @@
+Writing in console file
+Hi,Good morning
