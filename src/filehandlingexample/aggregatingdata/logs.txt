@@ -1,0 +1,8 @@
+2025-09-01 08:45:12,INFO,Application started successfully
+2025-09-01 08:46:03,WARN,Low memory warning triggered
+2025-09-01 08:47:25,ERROR,Database connection failed
+2025-09-01 08:48:10,INFO,Retrying database connection
+2025-09-01 08:48:45,INFO,Database connection established
+2025-09-01 09:00:00,DEBUG,User requested transaction history
+2025-09-01 09:01:15,INFO,Transaction processed successfully
+2025-09-01 09:02:30,ERROR,Transaction failed
