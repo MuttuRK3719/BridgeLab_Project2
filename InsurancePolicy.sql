@@ -77,3 +77,8 @@ DROP address ;
 UPDATE  policies
 SET premium =1000
 WHERE policy_id=2;
+
+DELETE FROM claimprocessing
+WHERE claim_id=2;
+DELETE FROM claims
+WHERE claim_id=2;
