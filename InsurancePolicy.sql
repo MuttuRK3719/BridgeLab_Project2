@@ -73,3 +73,7 @@ Rename COLUMN policy_name TO policy_title;
 
 ALTER TABLE customers
 DROP address ;
+
+UPDATE  policies
+SET premium =1000
+WHERE policy_id=2;
