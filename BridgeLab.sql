@@ -69,4 +69,38 @@ DELETE FROM Loans
 Where loanId=2;
 
 INSERT INTO Loans(loanId,bookId,memberId,loanDate,returnDate,actualReturnDate)
-VALUES(1005, 101, 1, '2023-08-01', '2023-08-15', '2023-08-14');S
+VALUES(1005, 101, 1, '2023-08-01', '2023-08-15', '2023-08-14');
+
+-- Retrieve all books along with their authors: 
+SELECT * FROM BOOKS B INNER JOIN author a ON a.authorId = B.authorId;
+
+-- Find all books currently on loan along with member details:
+SELECT b.bookId,
+       b.title,
+       l.loanId,
+       l.loanDate,
+       l.returnDate,
+       m.memberId,
+       m.firstName
+       FROM BOOKS b  
+INNER JOIN Loans l on b.bookId=l.bookId
+INNER JOIN members m on m.memberId=l.memberId
+where actualReturnDate is null;
+
+-- List all books borrowed by a specific member:
+SELECT b.bookId,
+		b.title,
+        l.loanDate,
+        l.returnDate,
+        l.actualReturnDate
+        FROM BOOKS b 
+        INNER JOIN Loans l on  l.bookId=b.bookId
+        INNER JOIN members m on m.memberId=l.memberId
+        WHERE m.memberId=1;
+       
+-- Get the total number of books and the total available copies for eachgenre:
+SELECT genre, COUNT(bookId),SUM(availableCopies) from BOOKS GROUP BY genre;
+
+-- Find all staff members who are librarians and their hire dates:-- 
+SELECT staffId,firstName,lastName,hireDate FROM staff 
+WHERE jobTitle='librarians';
