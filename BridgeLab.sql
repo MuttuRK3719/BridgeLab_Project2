@@ -45,4 +45,28 @@ contactNumber BIGINT,
 email VARCHAR(50),
 hireDate DATE);
 
-show tables;
+ALTER TABLE BOOKS
+ADD COLUMN customerName VARCHAR(50);
+
+ALTER TABLE STAFF
+RENAME COLUMN position TO jobTitle;
+
+SELECT * FROM STAFF;
+
+ALTER TABLE MEMBERS
+DROP COLUMN email;
+
+SELECT * FROM members;
+
+INSERT INTO BOOKS (bookId, title, authorId, publitionYear, genre, isbn, availableCopies)
+VALUES
+(105, '- Malegalalli Madumagalu', 1, 1949, 'Spiritual', 97881, 5);
+
+UPDATE  MEMBERS
+SET firstName='Muttu',lastName='kagal' where memberId=4;
+
+DELETE FROM Loans
+Where loanId=2;
+
+INSERT INTO Loans(loanId,bookId,memberId,loanDate,returnDate,actualReturnDate)
+VALUES(1005, 101, 1, '2023-08-01', '2023-08-15', '2023-08-14');S
