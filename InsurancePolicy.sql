@@ -102,3 +102,7 @@ cus.customer_id,cus.first_name,
 cus.last_name,cus.gender FROM claims c 
 INNER JOIN  customers cus 
 ON c.customer_id=cus.customer_id;
+
+SELECT p.policy_type, SUM(c.claim_amount),count(*) from claims c 
+INNER JOIN policies p ON p.policy_id=c.policy_id
+Group BY p.policy_type;
