@@ -106,3 +106,7 @@ ON c.customer_id=cus.customer_id;
 SELECT p.policy_type, SUM(c.claim_amount),count(*) from claims c 
 INNER JOIN policies p ON p.policy_id=c.policy_id
 Group BY p.policy_type;
+
+SELECT c.customer_id, c.first_name,c.last_name,MAX(claim.claim_date) FROM claims claim
+INNER JOIN customers c ON c.customer_id=claim.customer_id
+GROUP BY c.customer_id;
