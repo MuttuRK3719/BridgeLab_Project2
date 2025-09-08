@@ -67,3 +67,6 @@ CREATE TABLE ClaimProcessing (
 
 ALTER table agents
 ADD COLUMN HEIGHT FLOAT;
+
+ALTER TABLE policies
+Rename COLUMN policy_name TO policy_title;
