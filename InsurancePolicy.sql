@@ -82,3 +82,6 @@ DELETE FROM claimprocessing
 WHERE claim_id=2;
 DELETE FROM claims
 WHERE claim_id=2;
+
+INSERT INTO policies(policy_id,policy_title,policy_type,coverage_details,
+premium, start_date, end_date)values(6, 'Travel Guard', 'Travel', 'Covers international travel risks', 2500.00, '2023-08-01', '2024-08-01');
