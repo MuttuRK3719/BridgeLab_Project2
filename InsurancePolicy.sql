@@ -92,3 +92,6 @@ INNER JOIN policyassignments pa
 ON pa.customer_id=c.customer_id
 INNER JOIN policies p 
 ON p.policy_id=pa.policy_id;
+
+SELECT  c.claim_id,c.claim_amount,p.policy_type from claims c
+INNER JOIN policies p ON c.policy_id=p.policy_id;
