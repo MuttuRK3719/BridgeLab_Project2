@@ -95,3 +95,10 @@ ON p.policy_id=pa.policy_id;
 
 SELECT  c.claim_id,c.claim_amount,p.policy_type from claims c
 INNER JOIN policies p ON c.policy_id=p.policy_id;
+
+
+SELECT c.claim_id,c.claim_amount, 
+cus.customer_id,cus.first_name,
+cus.last_name,cus.gender FROM claims c 
+INNER JOIN  customers cus 
+ON c.customer_id=cus.customer_id;
