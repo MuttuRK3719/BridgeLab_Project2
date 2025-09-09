@@ -9,4 +9,8 @@ public class Operations {
     List<Policy> filterPolicy(List<Policy> policies) {
         return policies.stream().filter(policy -> policy.getAmount() > 1200).toList();
     }
+    List<Policy> sortPolicies(List<Policy> policies) {
+        Comparator<Policy> sortByName = (policy1, policy2) -> policy1.getName().compareTo(policy2.getName());
+        return policies.stream().sorted(sortByName).toList();
+    }
 }
