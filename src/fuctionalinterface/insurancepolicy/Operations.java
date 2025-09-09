@@ -21,4 +21,7 @@ public class Operations {
         policies.forEach(System.out::println);
     }
 
+    List<Policy> filterByPremium(List<Policy> policies) {
+        return policies.stream().filter(x -> x.getAmount() > 1000 && x.getAmount() < 2000).toList();
+    }
 }
