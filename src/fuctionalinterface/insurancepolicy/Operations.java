@@ -17,4 +17,8 @@ public class Operations {
         return policies.stream().mapToDouble(policy -> policy.getAmount()).sum();
     }
 
+    void printPolicies(List<Policy> policies) {
+        policies.forEach(System.out::println);
+    }
+
 }
