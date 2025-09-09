@@ -13,4 +13,8 @@ public class Operations {
         Comparator<Policy> sortByName = (policy1, policy2) -> policy1.getName().compareTo(policy2.getName());
         return policies.stream().sorted(sortByName).toList();
     }
+    double getTotalAmount(List<Policy> policies) {
+        return policies.stream().mapToDouble(policy -> policy.getAmount()).sum();
+    }
+
 }
