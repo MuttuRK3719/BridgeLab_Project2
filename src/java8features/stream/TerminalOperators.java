@@ -13,5 +13,8 @@ public class TerminalOperators {
     static Set<Integer> listToSet(List<Integer> arr) {
         return arr.stream().collect(Collectors.toSet());
     }
-
+    //    product of all numbers in a list.
+    static long reduceToProduct(List<Integer> arr) {
+        return arr.stream().reduce(1, (a, b) -> a * b);
+    }
 }
