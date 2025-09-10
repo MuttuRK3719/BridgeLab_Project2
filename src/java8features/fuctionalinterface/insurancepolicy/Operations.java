@@ -63,7 +63,16 @@ public class Operations {
     public long countPolicies(List<Policy> policies) {
         return policies.stream().filter(policy -> policy.getAmount() > 2000).count();
     }
-    public List<Policy>findUnique(List<Policy> policies){
+
+    //     Extract Unique Holder Names
+    public List<Policy> findUnique(List<Policy> policies) {
         return policies.stream().distinct().toList();
+    }
+
+    //    Find Policies by Holder Name Substring
+    public List<Policy> findPoliciesBySubstring(List<Policy> policies, String substring) {
+        return policies.stream()
+                .filter(policy -> policy.getName().indexOf(substring) != -1)
+                .toList();
     }
 }
