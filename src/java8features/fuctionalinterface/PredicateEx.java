@@ -1,7 +1,6 @@
-package fuctionalinterface;
+package java8features.fuctionalinterface;
 
 import java.util.List;
-import java.util.function.Predicate;
 
 public class PredicateEx {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package fuctionalinterface;
+package java8features.fuctionalinterface;
 
 interface AddNumber {
     int add(int a, int b);

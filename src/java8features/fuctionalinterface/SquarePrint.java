@@ -1,4 +1,4 @@
-package fuctionalinterface;
+package java8features.fuctionalinterface;
 
 public class SquarePrint {
     public static void main(String[] args) {

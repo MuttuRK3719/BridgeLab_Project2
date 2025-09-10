@@ -1,7 +1,6 @@
-package fuctionalinterface;
+package java8features.fuctionalinterface;
 
 import java.util.List;
-import java.util.function.BiConsumer;
 
 public class BiFunctionalEx {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package fuctionalinterface;
+package java8features.fuctionalinterface;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package fuctionalinterface.insurancepolicy;
+package java8features.fuctionalinterface.insurancepolicy;
 
 public class Policy {
     private String policyNumber;
@@ -21,5 +21,14 @@ public class Policy {
 
     public double getAmount() {
         return amount;
+    }
+
+    @Override
+    public String toString() {
+        return "Policy{" +
+                "policyNumber='" + policyNumber + '\'' +
+                ", name='" + name + '\'' +
+                ", amount=" + amount +
+                '}';
     }
 }

@@ -1,4 +1,4 @@
-package fuctionalinterface.sortobjects;
+package java8features.fuctionalinterface.sortobjects;
 
 public class Person {
     private String name;

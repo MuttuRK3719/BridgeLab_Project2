@@ -1,4 +1,4 @@
-package fuctionalinterface.sortobjects;
+package java8features.fuctionalinterface.sortobjects;
 
 import java.util.Comparator;
 import java.util.List;

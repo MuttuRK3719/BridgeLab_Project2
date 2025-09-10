@@ -1,6 +1,5 @@
-package fuctionalinterface;
+package java8features.fuctionalinterface;
 
-import java.util.Comparator;
 import java.util.List;
 
 public class MaxInteger {

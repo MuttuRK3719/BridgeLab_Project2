@@ -1,8 +1,7 @@
-package fuctionalinterface;
+package java8features.fuctionalinterface;
 
 import java.util.Scanner;
 import java.util.function.Function;
-import java.util.stream.DoubleStream;
 
 public class CalculateArea {
     public static void main(String[] args) {
