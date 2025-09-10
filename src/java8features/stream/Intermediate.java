@@ -14,4 +14,9 @@ public class Intermediate {
     static List<Integer> lengthOfString(List<String> arr) {
         return arr.stream().map(String::length).collect(Collectors.toList());
     }
+    //    list of names, sort them in ascending order.
+    static List<String> sortNames(List<String> names) {
+        return names.stream().sorted((a, b) -> a.compareTo(b)).toList();
+    }
+
 }
