@@ -12,5 +12,6 @@ public class Main {
 //        System.out.println(operations.groupPolicies(policies));
         System.out.println(operations.findAverage(policies));
         operations.sortByPremium(policies);
+        System.out.println(operations.countPolicies(policies));
     }
 }

@@ -59,4 +59,9 @@ public class Operations {
     public boolean policyExceeds(List<Policy> policies) {
         return policies.stream().anyMatch(policy -> policy.getAmount() > 2000);
     }
+
+    //     Count Policies for Each Premium Range
+    public long countPolicies(List<Policy> policies) {
+        return policies.stream().filter(policy -> policy.getAmount() > 2000).count();
+    }
 }
