@@ -22,5 +22,9 @@ public class Intermediate {
     static List<Integer> distinct(List<Integer> arr) {
         return arr.stream().distinct().toList();
     }
+    //    Limit & Skip
+    static List<Integer> limitAndSkip(List<Integer> arr, int limit, int skip) {
+        return arr.stream().filter(x -> x % 2 == 0).limit(limit).skip(skip).toList();
+    }
 
 }
