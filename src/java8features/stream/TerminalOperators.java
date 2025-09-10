@@ -9,5 +9,9 @@ public class TerminalOperators {
     static void printUsingForEach(List<Integer> arr) {
         arr.forEach(System.out::println);
     }
+    //    Convert a list of integers into a set.
+    static Set<Integer> listToSet(List<Integer> arr) {
+        return arr.stream().collect(Collectors.toSet());
+    }
 
 }
