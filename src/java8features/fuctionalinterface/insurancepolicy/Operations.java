@@ -44,4 +44,14 @@ public class Operations {
     public double findAverage(List<Policy> policies) {
         return policies.stream().mapToDouble(p -> p.getAmount()).average().getAsDouble();
     }
+
+    //    Sort Policies by Premium and Print
+    public List<Policy> sortByPremium(List<Policy> policies) {
+        policies = policies
+                .stream()
+                .sorted((policy1, policy2) -> (int) (policy1.getAmount() - policy2.getAmount()))
+                .toList();
+        policies.forEach(System.out::println);
+        return policies;
+    }
 }

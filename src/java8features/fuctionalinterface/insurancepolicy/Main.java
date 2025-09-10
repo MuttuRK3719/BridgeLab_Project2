@@ -11,6 +11,6 @@ public class Main {
                 , new Policy("p1289", "Djith", 1000));
 //        System.out.println(operations.groupPolicies(policies));
         System.out.println(operations.findAverage(policies));
-
+        operations.sortByPremium(policies);
     }
 }
