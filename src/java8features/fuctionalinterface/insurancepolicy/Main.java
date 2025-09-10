@@ -9,6 +9,8 @@ public class Main {
                 , new Policy("p2345", "Prasanna", 3000)
                 , new Policy("p6789", "Dhanush", 5000)
                 , new Policy("p1289", "Djith", 1000));
-        System.out.println(operations.groupPolicies(policies));
+//        System.out.println(operations.groupPolicies(policies));
+        System.out.println(operations.findAverage(policies));
+
     }
 }

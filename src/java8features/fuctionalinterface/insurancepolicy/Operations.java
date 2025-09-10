@@ -39,4 +39,9 @@ public class Operations {
         Map<Character, List<Policy>> map = policies.stream().collect(Collectors.groupingBy(policy -> policy.getName().charAt(0)));
         return new ArrayList<>(map.values());
     }
+
+    //    Compute Average Premium
+    public double findAverage(List<Policy> policies) {
+        return policies.stream().mapToDouble(p -> p.getAmount()).average().getAsDouble();
+    }
 }
