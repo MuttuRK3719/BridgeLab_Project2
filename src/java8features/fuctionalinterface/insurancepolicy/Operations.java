@@ -54,4 +54,9 @@ public class Operations {
         policies.forEach(System.out::println);
         return policies;
     }
+
+    //    Check If Any Policy Exceeds a Certain Premium
+    public boolean policyExceeds(List<Policy> policies) {
+        return policies.stream().anyMatch(policy -> policy.getAmount() > 2000);
+    }
 }
