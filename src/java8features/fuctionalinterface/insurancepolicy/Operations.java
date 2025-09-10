@@ -75,4 +75,11 @@ public class Operations {
                 .filter(policy -> policy.getName().indexOf(substring) != -1)
                 .toList();
     }
+
+    //     Create a Map of Policy Numbers to Premium Amounts
+    public Map<String, Double> groupPolicies1(List<Policy> policies) {
+        return policies
+                .stream()
+                .collect(Collectors.toMap(Policy::getPolicyNumber, policy -> policy.getAmount(), Double::sum));
+    }
 }
