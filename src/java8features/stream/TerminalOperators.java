@@ -24,4 +24,5 @@ public class TerminalOperators {
     static long countString(List<String> names) {
         return names.stream().filter(name -> name.startsWith("A")).count();
     }
+
 }
