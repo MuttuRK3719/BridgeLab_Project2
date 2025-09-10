@@ -1,9 +1,8 @@
 package java8features.fuctionalinterface.insurancepolicy;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+import java.util.function.Function;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 public class Operations {
@@ -63,5 +62,8 @@ public class Operations {
     //     Count Policies for Each Premium Range
     public long countPolicies(List<Policy> policies) {
         return policies.stream().filter(policy -> policy.getAmount() > 2000).count();
+    }
+    public List<Policy>findUnique(List<Policy> policies){
+        return policies.stream().distinct().toList();
     }
 }

@@ -24,6 +24,16 @@ public class Policy {
     }
 
     @Override
+    public boolean equals(Object obj) {
+        return name.hashCode() == ((Policy) (obj)).name.hashCode();
+    }
+
+    @Override
+    public int hashCode() {
+        return name.hashCode();
+    }
+
+    @Override
     public String toString() {
         return "Policy{" +
                 "policyNumber='" + policyNumber + '\'' +
