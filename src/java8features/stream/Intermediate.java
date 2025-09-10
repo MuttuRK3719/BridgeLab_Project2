@@ -26,5 +26,9 @@ public class Intermediate {
     static List<Integer> limitAndSkip(List<Integer> arr, int limit, int skip) {
         return arr.stream().filter(x -> x % 2 == 0).limit(limit).skip(skip).toList();
     }
+    //    printing elements after filtering even numbers
+    static List<Integer> peekAndFilter(List<Integer> arr) {
+        return arr.stream().filter(x -> x % 2 == 0).peek(System.out::println).toList();
+    }
 
 }
