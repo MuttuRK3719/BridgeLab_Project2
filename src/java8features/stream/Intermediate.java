@@ -18,5 +18,9 @@ public class Intermediate {
     static List<String> sortNames(List<String> names) {
         return names.stream().sorted((a, b) -> a.compareTo(b)).toList();
     }
+    //    List of integers, return only distinct values.
+    static List<Integer> distinct(List<Integer> arr) {
+        return arr.stream().distinct().toList();
+    }
 
 }
