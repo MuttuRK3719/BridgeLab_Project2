@@ -20,9 +20,15 @@ public class TerminalOperators {
         return arr.stream().reduce(1, (a, b) -> a * b);
     }
 
-//    counting the name starts with A
+    //    counting the name starts with A
     static long countString(List<String> names) {
         return names.stream().filter(name -> name.startsWith("A")).count();
     }
 
+    //    Find the first string longer than 5 characters.
+    static boolean firstLongest(List<String> names) {
+        return names
+                .stream()
+                .anyMatch(s -> s.length() > 5);
+    }
 }
