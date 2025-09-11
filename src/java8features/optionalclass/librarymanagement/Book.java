@@ -1,4 +1,4 @@
-package java8features.optionalclass;
+package java8features.optionalclass.librarymanagement;
 
 public class Book {
     private int id;

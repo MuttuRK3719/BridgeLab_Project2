@@ -1,12 +1,8 @@
-package java8features.optionalclass;
+package java8features.optionalclass.librarymanagement;
 
-import javax.swing.text.StyledDocument;
-import javax.swing.text.html.Option;
-import java.util.Arrays;
-import java.util.Collections;
+import java8features.optionalclass.Student;
+
 import java.util.Optional;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
 
 public class MainStudent {
     public static void main(String[] args) {

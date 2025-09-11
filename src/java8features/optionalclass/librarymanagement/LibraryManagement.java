@@ -1,4 +1,4 @@
-package java8features.optionalclass;
+package java8features.optionalclass.librarymanagement;
 
 import java.util.*;
 import java.util.function.Function;
