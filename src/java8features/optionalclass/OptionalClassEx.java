@@ -15,7 +15,7 @@ public class OptionalClassEx {
         System.out.println(orElseNull(email2));
         System.out.println(orElseThrow(email2));
 //        System.out.println(orElseThrow(null));
-        st="muttu";
+        st = "muttu";
         System.out.println(toUpperCase(st));
 
     }
@@ -41,5 +41,13 @@ public class OptionalClassEx {
                 .of(name)
                 .map(String::toUpperCase)
                 .orElse("Default value");
+    }
+
+//    multiply the value by 2 if present, otherwise return -1.
+    public static int OptionalMultiply(Integer n) {
+        return Optional
+                .ofNullable(n)
+                .map(i -> i * 2)
+                .orElse(-1);
     }
 }
