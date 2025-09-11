@@ -14,8 +14,9 @@ public class OptionalClassEx {
         System.out.println(orElseNull(email));
         System.out.println(orElseNull(email2));
         System.out.println(orElseThrow(email2));
-        System.out.println(orElseThrow(null));
-
+//        System.out.println(orElseThrow(null));
+        st="muttu";
+        System.out.println(toUpperCase(st));
 
     }
 
@@ -29,8 +30,16 @@ public class OptionalClassEx {
         return Optional.ofNullable(name).orElse("null@gmail.com");
     }
 
-//     throw an exception if value is missing.
+    //     throw an exception if value is missing.
     public static Optional<String> orElseThrow(String name) {
         return Optional.ofNullable(name).orElseThrow().describeConstable();
+    }
+
+    //    to convert a string to uppercase safely.
+    public static String toUpperCase(String name) {
+        return Optional
+                .of(name)
+                .map(String::toUpperCase)
+                .orElse("Default value");
     }
 }
