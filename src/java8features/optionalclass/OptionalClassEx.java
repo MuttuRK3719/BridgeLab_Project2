@@ -1,5 +1,7 @@
 package java8features.optionalclass;
 
+import javax.swing.text.html.Option;
+import java.util.NoSuchElementException;
 import java.util.Optional;
 
 public class OptionalClassEx {
@@ -7,10 +9,13 @@ public class OptionalClassEx {
         String st = "MUTTU";
         System.out.println(getName(st).orElse("Default"));
         System.out.println(getName(null));
-        String email=null;
-        String email2="muttu@gmail.com";
+        String email = null;
+        String email2 = "muttu@gmail.com";
         System.out.println(orElseNull(email));
         System.out.println(orElseNull(email2));
+        System.out.println(orElseThrow(email2));
+        System.out.println(orElseThrow(null));
+
 
     }
 
@@ -22,5 +27,10 @@ public class OptionalClassEx {
     //    default value if email is null.
     public static String orElseNull(String name) {
         return Optional.ofNullable(name).orElse("null@gmail.com");
+    }
+
+//     throw an exception if value is missing.
+    public static Optional<String> orElseThrow(String name) {
+        return Optional.ofNullable(name).orElseThrow().describeConstable();
     }
 }
