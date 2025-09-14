@@ -1,5 +1,16 @@
 package dsa.queue1;
 
+“In a queue, elements are removed from the front.
+In an array implementation, if we try to actually delete the
+front element and shift all remaining elements forward, it takes O(n) time every removal. That’s inefficient.
+
+Instead, we keep a front pointer that just moves forward 
+    when we remove an element. This avoids shifting, so removal is O(1).
+
+But the drawback is: once the rear reaches the end of the array,
+    even if there’s free space at the beginning, it can’t be reused. That’s why we use a circular queue, 
+    where the rear can wrap around to the beginning and reuse the space.”
+
 public class CircularQueue {
     public static void main(String[] args) {
         CircularQueue circularQueue = new CircularQueue(5);
