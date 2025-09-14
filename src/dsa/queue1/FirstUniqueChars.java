@@ -5,7 +5,7 @@ import java.util.Deque;
 
 public class FirstUniqueChars {
     public static void main(String[] args) {
-        System.out.println(replaceUnique("aabc"));
+        System.out.println(replaceUnique("aabc"));// a-1bb
     }
 
     static String replaceUnique(String s) {
