@@ -1,5 +1,7 @@
 package multithreading;
 
+import java.util.HashSet;
+import java.util.Set;
 import java.util.concurrent.Semaphore;
 
 public class DiningPhilosophers {
@@ -54,7 +56,6 @@ public class DiningPhilosophers {
 
     public static void main(String[] args) {
         Philosopher[] philosophers = new Philosopher[NUM_PHILOSOPHERS];
-
         for (int i = 0; i < NUM_PHILOSOPHERS; i++) {
             philosophers[i] = new Philosopher(i);
             philosophers[i].start();
